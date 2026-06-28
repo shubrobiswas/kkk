@@ -1,0 +1,3 @@
+# Instrument
+
+::: instro.lib.instrument
