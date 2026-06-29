@@ -1,0 +1,82 @@
+{
+  "include-component-in-tag": true,
+  "bump-minor-pre-major": true,
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "perf",
+      "section": "Performance Improvements"
+    },
+    {
+      "type": "docs",
+      "section": "Documentation",
+      "hidden": true
+    },
+    {
+      "type": "chore",
+      "section": "Miscellaneous",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "section": "Miscellaneous",
+      "hidden": true
+    }
+  ],
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "component": "instro"
+    },
+    "packages/instro-daq-labjack": {
+      "release-type": "python",
+      "component": "instro-daq-labjack"
+    },
+    "packages/instro-daq-mcc": {
+      "release-type": "python",
+      "component": "instro-daq-mcc"
+    },
+    "packages/instro-daq-ni": {
+      "release-type": "python",
+      "component": "instro-daq-ni"
+    },
+    "packages/instro-i2c-aardvark": {
+      "release-type": "python",
+      "component": "instro-i2c-aardvark"
+    },
+    "packages/instro-unstable": {
+      "release-type": "python",
+      "component": "instro-unstable"
+    },
+    "packages/instro-ethernetip": {
+      "release-type": "python",
+      "component": "instro-ethernetip"
+    },
+    "packages/instro-contrib": {
+      "release-type": "python",
+      "component": "instro-contrib"
+    }
+  },
+  "groups": [
+    {
+      "name": "instro",
+      "packages": [
+        ".",
+        "packages/instro-daq-labjack",
+        "packages/instro-daq-mcc",
+        "packages/instro-daq-ni",
+        "packages/instro-i2c-aardvark",
+        "packages/instro-unstable",
+        "packages/instro-ethernetip",
+        "packages/instro-contrib"
+      ]
+    }
+  ]
+}
