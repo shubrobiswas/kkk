@@ -22,6 +22,8 @@ jobs:
           echo "$TITLE" | commitlint --config .github/commitlint.config.js
       - name: display helpful error message
         if: failure()
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
         run: |
-          echo "🚨 Your PR Title: \"${{ github.event.pull_request.title }}\" did not pass linting" >> $GITHUB_STEP_SUMMARY
+          printf '🚨 Your PR Title: "%s" did not pass linting\n' "$TITLE" >> "$GITHUB_STEP_SUMMARY"
           echo "Please update it to follow conventional commit format: https://www.conventionalcommits.org/" >> $GITHUB_STEP_SUMMARY
